@@ -1,0 +1,6 @@
+# Allow all search engines to crawl
+User-agent: *
+Allow: /
+
+# Point to sitemap
+Sitemap: https://kpshakkir7-afk.github.io/Personal/sitemap.xml
