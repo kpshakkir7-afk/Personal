@@ -894,7 +894,7 @@ async function subForm(btn){
   btn.disabled=true;
   btn.style.background='#4a463f';
   try {
-    var resp=await fetch('https://formspree.io/f/YOUR_FORM_ID',{
+    var resp=await fetch('https://formspree.io/f/xlgobzez',{
       method:'POST',
       headers:{'Content-Type':'application/json','Accept':'application/json'},
       body:JSON.stringify({name:n,email:e,company:co,reason:r,message:m})
@@ -915,6 +915,32 @@ async function subForm(btn){
     setTimeout(function(){btn.textContent='Send Message →';btn.style.background='';btn.disabled=false;},5000);
   }
 }
+</script>
+  <script>
+const form = document.querySelector("form");
+
+form.addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
+
+  const resp = await fetch('https://formspree.io/f/xlgobzez', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify(data)
+  });
+
+  if (resp.ok) {
+    alert("Message sent successfully!");
+    form.reset();
+  } else {
+    alert("Something went wrong.");
+  }
+});
 </script>
 </body>
 </html>
