@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Point to sitemap
-Sitemap: https://kpshakkir7-afk.github.io/Personal/sitemap.xml
+Sitemap: https://www.shakkir.pp.ua/sitemap.xml
